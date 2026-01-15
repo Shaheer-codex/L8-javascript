@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS class</h2>
+    <p id="e1"></p>
+    <p id="e2"></p>
+    <p id="e3"></p>
+    <script>
+        class employee {
+            constructor(name,year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        emp1 = new employee("Aehan ", 2012)
+        emp2 = new employee("Hassan ", 2011)
+        emp3 = new employee("Saim ", 2012)
+        document.getElementById("e1").innerHTML = "Employee name is " + emp1.name + "and age is " + emp1.age();
+        document.getElementById("e2").innerHTML = "Employee name is " + emp2.name + "and age is " + emp2.age();
+        document.getElementById("e3").innerHTML = "Employee name is " + emp3.name + "and age is " + emp3.age();
+    </script>
+</body>
+</html>

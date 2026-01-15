@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Class Static Method</h2>
+    <p id="r1"></p>
+    <p id="r2"></p>
+    <p id="r3"></p>
+    <p id="r4"></p>
+    <script>
+        class Person {
+            constructor(n) {
+                this.name = n;
+            }
+            static hello(){
+                return "Hello Everyone"
+            }
+            static intro(obj) {
+                return "Welcome " + obj.name;
+            }
+        }
+        objperson1 = new Person("Saim")
+        objperson2 = new Person("Aehan")
+        objperson3 = new Person("Hassan")
+        document.getElementById("r1").innerHTML = Person.hello();
+        document.getElementById("r2").innerHTML = Person.intro(objperson1);
+        document.getElementById("r3").innerHTML = Person.intro(objperson2);
+        document.getElementById("r4").innerHTML = Person.intro(objperson3);
+    </script>
+</body>
+</html>
